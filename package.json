@@ -1,0 +1,27 @@
+{
+  "name": "koa-tian",
+  "version": "0.0.1",
+  "description": "构建企业级的koa框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youthcity/koa-tian.git"
+  },
+  "keywords": [
+    "koa",
+    "nodejs"
+  ],
+  "author": "youthcity",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youthcity/koa-tian/issues"
+  },
+  "homepage": "https://github.com/youthcity/koa-tian#readme",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-router": "^7.4.0"
+  }
+}
