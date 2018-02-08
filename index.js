@@ -1,13 +1,13 @@
 const Koa = require('koa');
 const rotuer = require('koa-router');
 
+const set_routers = require('./router_loader');
+
 const app = new Koa();
 const Rotuer = new rotuer();
 
-Rotuer.get('/', (ctx, next) => {
-  ctx.body = 'hello';
-});
+console.log(set_routers);
 
-app.use(Rotuer.routes());
+app.use(set_routers());
 
 app.listen(3000);
