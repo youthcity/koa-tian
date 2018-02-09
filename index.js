@@ -2,12 +2,12 @@ const Koa = require('koa');
 const rotuer = require('koa-router');
 
 const set_routers = require('./router_loader');
-const controller_loader = require('./controller_loader');
+const load_controller = require('./loader').load_controller;
 
-const controllers = controller_loader();
+const controllers = load_controller();
 Koa.prototype['controller'] = {};
 controllers.forEach((item) => {
-  Koa.prototype.controller[item.name] = item.controller;
+  Koa.prototype.controller[item.name] = item.module;
 });
 
 const app = new Koa();
