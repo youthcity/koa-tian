@@ -29,7 +29,7 @@ const files = fs.，readdirSync(dir);
 
 作者的思想是基于经典的MVC模式实现的，为了减少开发时的文件引用（例如，service、controller文件），作者通过「扫描」controller文件夹、service文件夹，将controller挂载到Koa的原型链上，service则通过参数的形式，注入到controller中。这样，开发者就可以减少开发中文件的引用。
 
-在我们平时项目中，我们利用了 `module-alias`，来形成文件的前缀，然后再在文件中通过「别名」进行文件引入，虽然这样也可以减少一部分的引入工作，但是还是需要人工引入，非常繁琐。
+在我们平时项目中，我们利用了 [module-alias](https://github.com/ilearnio/module-alias)，来形成文件的前缀，然后再在文件中通过「别名」进行文件引入，虽然这样也可以减少一部分的引入工作，但是还是需要人工引入，非常繁琐。
 
 作者提供了一个很好的思路，解决文件引入的问题。但是，我有另外一个问题，如何在 Typescript 项目中使用这种注入文件。怎样做到 `interfaces` 的自动提示与挂载。
 
